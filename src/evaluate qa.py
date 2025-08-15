@@ -4,7 +4,7 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.chains import RetrievalQA
 from langchain.evaluation.qa import QAGenerateChain, QAEvalChain
 # Assuming your get_llm and embeddings are in these files
-from test_memory import get_llm 
+from langchain_utils import get_llm 
 from AzureConnection import embeddings
 
 # --- 1. Setup and Data Loading ---
@@ -13,7 +13,7 @@ from AzureConnection import embeddings
 # os.environ["OPENAI_API_KEY"] = "YOUR_API_KEY" 
 
 # Load the documents from the CSV file
-loader = CSVLoader(file_path='OutdoorClothingCatalog_1000.csv')
+loader = CSVLoader(file_path='../data/OutdoorClothingCatalog_1000.csv')
 docs = loader.load()
 
 # Initialize your LLM model

@@ -1,5 +1,5 @@
-from test_memory import get_llm
 from AzureConnection import embeddings 
+from langchain_utils import get_llm
 from langchain.document_loaders import CSVLoader
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.vectorstores import DocArrayInMemorySearch
@@ -7,7 +7,7 @@ from langchain.chains import RetrievalQA
 from langchain.evaluation.qa import QAGenerateChain
 
 # Setup QA system
-loader = CSVLoader(file_path='OutdoorClothingCatalog_1000.csv')
+loader = CSVLoader(file_path='../data/OutdoorClothingCatalog_1000.csv')
 docs = loader.load()
 
 index = VectorstoreIndexCreator(

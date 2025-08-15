@@ -13,8 +13,8 @@ from langchain.chains.router.llm_router import LLMRouterChain
 from langchain.chains.router.prompt import RouterPromptTemplate
 from langchain.memory import ConversationBufferMemory
 
-# Import model configuration from test_memory.py
-from test_memory import MODEL_CONFIG, get_llm
+# Import model configuration from langchain_utils.py
+from .langchain_utils import MODEL_CONFIG, get_llm
 
 def setup_llm():
     """Set up Azure OpenAI LLM with centralized configuration"""
