@@ -145,6 +145,9 @@ ENV/
 env.bak/
 venv.bak/
 
+# Configuration files with sensitive data
+config.py
+
 # Spyder project settings
 .spyderproject
 .spyproject
